@@ -19,6 +19,5 @@
             "Apelsin\\Language\\": "src/"
         }
     },
-    "minimum-stability": "dev",
-    "prefer-stable": true
+    "minimum-stability": "dev"
 }
