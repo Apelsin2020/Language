@@ -1,6 +1,6 @@
 <?php
 
-namespace Apelsin\Language\artisan;
+namespace OrangeLaravel\Language\artisan;
 
 use Illuminate\Console\Command;
 use Symfony\Component\Console\Command\Command as CommandAlias;

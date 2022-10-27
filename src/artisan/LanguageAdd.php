@@ -1,6 +1,6 @@
 <?php
 
-namespace Apelsin\Language\artisan;
+namespace OrangeLaravel\Language\artisan;
 
 use Illuminate\Console\Command;
 use Symfony\Component\Console\Command\Command as CommandAlias;
@@ -31,18 +31,16 @@ class LanguageAdd extends Command
         $resource = resource_path('lang');
         $lang = $this->argument('lang');
         $file = $resource . "\\$lang.json";
-        if (is_dir($resource)){
-//            mkdir($resource);
-            if (is_file($file)){
-                $this->error("This language already exists");
-            }else{
-                file_put_contents($file, '');
-                $this->info('Language success created');
-            }
-            exit();
-        }else{
-            $this->error('Folder LANG not defined');
+        if (!is_dir($resource)) {
+            mkdir($resource);
+        }
+        if (is_file($file)) {
+            $this->error("This language already exists");
+        } else {
+            file_put_contents($file, '');
+            $this->info('Language success created');
         }
         return CommandAlias::SUCCESS;
     }
+
 }

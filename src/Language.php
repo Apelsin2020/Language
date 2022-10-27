@@ -1,6 +1,6 @@
 <?php
 
-namespace Apelsin\Language;
+namespace OrangeLaravel\Language;
 
 use Illuminate\Support\Arr;
 
@@ -24,7 +24,7 @@ class Language
         return Arr::get($array, $path);
     }
 
-    public static function add($path, $value, $language)
+    public static function set($path, $value, $language)
     {
         $array = self::getArray($language);
         Arr::set($array, $path, $value);

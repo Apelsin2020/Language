@@ -1,12 +1,12 @@
 {
-    "name": "apelsin/language",
+    "name": "orangelaravel/language",
     "description": "Language for Laravel",
-    "keywords": ["language laravel", "translate laravel"],
+    "keywords": ["language laravel", "translate laravel", "Localization Laravel"],
     "license": "MIT",
     "authors": [
         {
-            "name": "apelsin",
-            "email": "shceva.vanya12345@mail.ru"
+            "name": "OrangeLaravel",
+            "email": "shceva.vanya1234@gmail.com"
         }
     ],
     "require": {
@@ -16,7 +16,7 @@
 
     "autoload": {
         "psr-4": {
-            "Apelsin\\Language\\": "src/"
+            "OrangeLaravel\\Language\\": "src/"
         }
     },
     "minimum-stability": "dev"
