@@ -1,23 +1,21 @@
 <?php
 
-namespace App\Models;
+namespace Apelsin\Language;
 
-use Illuminate\Database\Eloquent\Model;
 use Illuminate\Support\Arr;
-use PhpParser\Node\Expr\Array_;
 
-class Language extends Model
+class Language
 {
     private static function getArray($language)
     {
-        $path_to_file = public_path() . '/../resources/lang/' . $language . '.json';
+        $path_to_file = env('Language_path') . "/$language.json";
         $file = file_get_contents($path_to_file);
         return json_decode($file, true);
     }
 
     private static function setArray($array, $language)
     {
-        $path_to_file = public_path() . '/../resources/lang/' . $language . '.json';
+        $path_to_file = env('Language_path') . "/$language.json";
         file_put_contents($path_to_file, json_encode($array));
     }
 
@@ -33,7 +31,7 @@ class Language extends Model
         self::setArray($array, $language);
     }
 
-    public static function forget($path, $language)
+    public static function delete($path, $language)
     {
         $array = self::getArray($language);
         Arr::forget($array, $path);
