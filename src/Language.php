@@ -8,14 +8,14 @@ class Language
 {
     private static function getArray($language)
     {
-        $path_to_file = env('LANGUAGE_PATH') . "/$language.json";
+        $path_to_file = resource_path("lang\\$language.json");
         $file = file_get_contents($path_to_file);
         return json_decode($file, true);
     }
 
     private static function setArray($array, $language)
     {
-        $path_to_file = env('LANGUAGE_PATH') . "/$language.json";
+        $path_to_file = resource_path("lang\\$language.json");
         file_put_contents($path_to_file, json_encode($array));
     }
 
