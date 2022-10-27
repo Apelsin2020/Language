@@ -1,0 +1,19 @@
+{
+    "name": "apelsin/language",
+    "description": "Language for Laravel",
+    "keywords": ["language laravel", "translate laravel"],
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "apelsin",
+            "email": "shceva.vanya12345@mail.ru"
+        }
+    ],
+    "require": {
+        "php": ">=5.4.0",
+    },
+
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true
+}
