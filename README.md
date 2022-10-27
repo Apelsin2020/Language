@@ -17,7 +17,7 @@
 # Установка
 
 ```bash
-composer require "Orange-laravel/Language"
+composer require orangelaravel/language
 ```
 
 Для работы artisan команд нужно в файле `app\Console\Kernel` добавить следующее:

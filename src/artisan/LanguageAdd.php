@@ -37,7 +37,7 @@ class LanguageAdd extends Command
         if (is_file($file)) {
             $this->error("This language already exists");
         } else {
-            file_put_contents($file, '');
+            file_put_contents($file, '{}');
             $this->info('Language success created');
         }
         return CommandAlias::SUCCESS;
